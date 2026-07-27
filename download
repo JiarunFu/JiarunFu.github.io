@@ -1,0 +1,124 @@
+(() => {
+  'use strict';
+  const root = document.documentElement;
+  const header = document.querySelector('.site-header');
+  const languageToggle = document.querySelector('.language-toggle');
+  const languageCurrent = document.querySelector('.language-current');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const year = document.querySelector('#year');
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  const setLanguage = (lang) => {
+    const normalized = lang === 'zh' ? 'zh' : 'en';
+    root.dataset.lang = normalized;
+    root.lang = normalized === 'zh' ? 'zh-CN' : 'en';
+    if (languageCurrent) languageCurrent.textContent = normalized === 'en' ? '中' : 'EN';
+    try { localStorage.setItem('preferred-language', normalized); } catch (_) {}
+  };
+  let savedLanguage = null;
+  try { savedLanguage = localStorage.getItem('preferred-language'); } catch (_) {}
+  setLanguage(savedLanguage || 'en');
+  languageToggle?.addEventListener('click', () => setLanguage(root.dataset.lang === 'en' ? 'zh' : 'en'));
+
+  const closeMenu = () => {
+    navLinks?.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+  };
+  menuToggle?.addEventListener('click', () => {
+    const isOpen = navLinks?.classList.toggle('open') || false;
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  navLinks?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+  window.addEventListener('resize', () => { if (window.innerWidth > 760) closeMenu(); }, { passive: true });
+
+  const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY > 18);
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reveals = document.querySelectorAll('.reveal');
+  if (reducedMotion || !('IntersectionObserver' in window)) {
+    reveals.forEach((element) => element.classList.add('visible'));
+  } else {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+    reveals.forEach((element) => observer.observe(element));
+  }
+
+  if (!reducedMotion) initNeuralCanvas();
+  function initNeuralCanvas() {
+    const canvas = document.querySelector('#neuralCanvas');
+    if (!(canvas instanceof HTMLCanvasElement)) return;
+    const context = canvas.getContext('2d');
+    if (!context) return;
+    let width = 0, height = 0, ratio = 1, points = [], animationId = 0;
+
+    const resize = () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      ratio = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(width * ratio);
+      canvas.height = Math.round(height * ratio);
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+      const count = Math.max(24, Math.min(70, Math.floor((width * height) / 27000)));
+      points = Array.from({ length: count }, () => ({
+        x: Math.random() * width, y: Math.random() * height,
+        vx: (Math.random() - .5) * .13, vy: (Math.random() - .5) * .13,
+        r: Math.random() * 1.15 + .35
+      }));
+    };
+
+    const draw = () => {
+      context.clearRect(0, 0, width, height);
+      for (const p of points) {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < -10) p.x = width + 10;
+        if (p.x > width + 10) p.x = -10;
+        if (p.y < -10) p.y = height + 10;
+        if (p.y > height + 10) p.y = -10;
+      }
+      for (let i = 0; i < points.length; i += 1) {
+        for (let j = i + 1; j < points.length; j += 1) {
+          const dx = points[i].x - points[j].x;
+          const dy = points[i].y - points[j].y;
+          const distance = Math.hypot(dx, dy);
+          if (distance < 145) {
+            context.strokeStyle = `rgba(105,225,235,${(1 - distance / 145) * .17})`;
+            context.lineWidth = .6;
+            context.beginPath();
+            context.moveTo(points[i].x, points[i].y);
+            context.lineTo(points[j].x, points[j].y);
+            context.stroke();
+          }
+        }
+      }
+      for (const p of points) {
+        context.fillStyle = 'rgba(137,231,239,.42)';
+        context.beginPath();
+        context.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        context.fill();
+      }
+      animationId = requestAnimationFrame(draw);
+    };
+
+    resize();
+    draw();
+    let resizeTimer = 0;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(resize, 120);
+    }, { passive: true });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) cancelAnimationFrame(animationId); else draw();
+    });
+  }
+})();

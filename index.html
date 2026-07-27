@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b16">
+  <meta name="color-scheme" content="dark">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="description" content="Jiarun Fu — Ph.D. candidate researching causal intelligence, agent planning, trustworthy large-model reasoning, uncertainty, and multi-agent systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jiarun Fu — Causal Intelligence & Agent Planning">
+  <meta property="og:description" content="Researching causal intelligence, generalized agent planning, trustworthy reasoning, uncertainty, and multi-agent systems.">
+  <meta property="og:image" content="assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jiarun Fu — Causal Intelligence & Agent Planning">
+  <meta name="twitter:description" content="Researching causal intelligence, generalized agent planning, trustworthy reasoning, uncertainty, and multi-agent systems.">
+  <meta name="twitter:image" content="assets/og-card.png">
+  <title>Jiarun Fu — Causal Intelligence & Agent Planning</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/avatar.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas id="neuralCanvas" aria-hidden="true"></canvas>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Jiarun Fu homepage">
+        <span class="brand-mark">JF</span>
+        <span class="brand-text">Jiarun Fu<span class="brand-dot">.</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about"><span class="en">About</span><span class="zh">简介</span></a>
+        <a href="#research"><span class="en">Research</span><span class="zh">研究</span></a>
+        <a href="#publications"><span class="en">Publications</span><span class="zh">成果</span></a>
+        <a href="#experience"><span class="en">Experience</span><span class="zh">经历</span></a>
+        <a href="#contact"><span class="en">Contact</span><span class="zh">联系</span></a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-button language-toggle" type="button" aria-label="Switch language" title="Switch language"><span class="language-current">中</span></button>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero shell section">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span class="en">Ph.D. Candidate · Causal & Uncertain AI</span><span class="zh">博士生 · 因果与不确定性人工智能</span></div>
+        <p class="hero-kicker">Hello, I’m</p>
+        <h1>Jiarun Fu <span>傅稼润</span></h1>
+        <p class="hero-lead en">I study how intelligent systems can identify mechanisms, quantify uncertainty, intervene deliberately, and generalize reliably.</p>
+        <p class="hero-lead zh">我研究智能系统如何识别机制、量化不确定性、实施可控干预，并实现可靠泛化。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#publications"><span class="en">Selected work</span><span class="zh">代表性成果</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M11 6l4 4-4 4"/></svg></a>
+          <a class="button button-ghost" href="mailto:jrfu@bit.edu.cn"><span class="en">Email me</span><span class="zh">邮件联系</span></a>
+        </div>
+        <div class="hero-meta" aria-label="Current affiliations">
+          <div><span class="meta-index">01</span><p><strong class="en">Beijing Institute of Technology</strong><strong class="zh">北京理工大学</strong><br><span class="en">School of Computer Science</span><span class="zh">计算机学院</span></p></div>
+          <div><span class="meta-index">02</span><p><strong class="en">Renmin University of China</strong><strong class="zh">中国人民大学</strong><br><span class="en">Gaoling School of AI · Visiting Student</span><span class="zh">高瓴人工智能学院 · 访问学生</span></p></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Portrait and research map">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="portrait-frame">
+          <div class="portrait-glow" aria-hidden="true"></div>
+          <picture><source srcset="assets/avatar.webp" type="image/webp"><img src="assets/avatar.jpg" alt="Portrait of Jiarun Fu" width="720" height="720"></picture>
+          <div class="portrait-label label-top">CAUSAL</div><div class="portrait-label label-right">AGENT</div><div class="portrait-label label-bottom">TRUST</div><div class="scanline" aria-hidden="true"></div>
+        </div>
+        <div class="signal-card signal-a"><span>ICML</span><strong>2026</strong></div><div class="signal-card signal-b"><span>AAAI</span><strong>Oral</strong></div>
+        <svg class="research-graph" viewBox="0 0 560 560" aria-hidden="true"><defs><linearGradient id="edgeGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#69e7f0" stop-opacity=".9"/><stop offset="1" stop-color="#a989ff" stop-opacity=".3"/></linearGradient></defs><path d="M84 405 C155 332 188 222 270 145 S423 111 475 198"/><path d="M105 160 C176 211 205 318 304 384 S435 420 486 360"/><path d="M90 300 C180 273 260 284 342 218 S440 165 487 91"/><circle cx="84" cy="405" r="5"/><circle cx="270" cy="145" r="6"/><circle cx="475" cy="198" r="5"/><circle cx="105" cy="160" r="5"/><circle cx="304" cy="384" r="6"/><circle cx="486" cy="360" r="5"/><circle cx="90" cy="300" r="4"/><circle cx="342" cy="218" r="5"/><circle cx="487" cy="91" r="4"/></svg>
+      </div>
+    </section>
+
+    <section class="manifesto section shell reveal" aria-label="Research philosophy">
+      <div class="manifesto-label"><span class="en">Research trajectory</span><span class="zh">研究主线</span></div>
+      <div class="manifesto-flow"><span><b>01</b><em class="en">Mechanism identification</em><em class="zh">因果机制识别</em></span><i>→</i><span><b>02</b><em class="en">Uncertainty quantification</em><em class="zh">不确定性量化</em></span><i>→</i><span><b>03</b><em class="en">Interventional control</em><em class="zh">干预式控制</em></span><i>→</i><span><b>04</b><em class="en">Complex-system validation</em><em class="zh">复杂系统验证</em></span></div>
+    </section>
+
+    <section class="section shell" id="about">
+      <div class="section-heading reveal"><p class="section-number">01 / ABOUT</p><h2 class="en">Building intelligence that can explain <span>why</span>.</h2><h2 class="zh">构建能够解释“<span>为什么</span>”的智能。</h2></div>
+      <div class="about-grid">
+        <article class="about-copy glass-card reveal">
+          <p class="en">I am a Ph.D. candidate at the School of Computer Science, Beijing Institute of Technology, advised by Prof. Lizhong Ding, and a visiting student at the Gaoling School of Artificial Intelligence, Renmin University of China, collaborating with Prof. Xu Chen.</p>
+          <p class="zh">我是北京理工大学计算机学院博士生，导师为丁立中教授；同时在中国人民大学高瓴人工智能学院访学，合作导师为陈旭教授。</p>
+          <p class="en">My research spans causal learning and counterfactual reasoning, uncertainty modeling, generalizable agent planning, trustworthy large-model reasoning, and multi-agent systems. I am particularly interested in turning causal evidence into operational decisions for long-horizon agents and complex social systems.</p>
+          <p class="zh">我的研究涵盖因果学习与反事实推理、不确定性建模、可泛化智能体规划、可信大模型推理及多智能体系统，尤其关注如何将因果证据转化为长程智能体与复杂社会系统中的可执行决策。</p>
+        </article>
+        <div class="stats-grid reveal"><article class="stat-card"><strong>ICML</strong><span>2026</span><small class="en">Agent planning</small><small class="zh">智能体规划</small></article><article class="stat-card"><strong>AAAI</strong><span>Oral</span><small class="en">Counterfactual planning</small><small class="zh">反事实规划</small></article><article class="stat-card"><strong>6</strong><span class="en">Research themes</span><span class="zh">研究主题</span><small class="en">One causal thread</small><small class="zh">统一因果主线</small></article><article class="stat-card"><strong>2023—</strong><span class="en">Ph.D.</span><span class="zh">博士阶段</span><small>Beijing · China</small></article></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="research">
+      <div class="section-heading reveal"><p class="section-number">02 / RESEARCH</p><h2 class="en">Six directions, one question:<br><span>how should AI act under uncertainty?</span></h2><h2 class="zh">六个方向，一个核心问题：<br><span>人工智能应如何在不确定性下行动？</span></h2></div>
+      <div class="research-grid">
+        <article class="research-card feature reveal"><div class="card-top"><span class="card-index">R1</span><span class="card-chip">CORE</span></div><h3 class="en">Causal Reasoning & Counterfactual Learning</h3><h3 class="zh">因果推理、反事实学习与可解释智能</h3><p class="en">Identify mechanism-level factors behind reasoning and decisions through structural causal models, controlled interventions, and counterfactual contrasts.</p><p class="zh">围绕结构因果模型、可控干预和反事实对照，识别大模型与智能体推理、决策中真正影响结果的机制性因素。</p><div class="topic-list"><span>SCM</span><span>Counterfactuals</span><span>Attribution</span></div><svg class="card-visual" viewBox="0 0 240 120" aria-hidden="true"><path d="M18 84 C55 84 58 31 96 31 S144 91 180 64 219 41 226 41"/><circle cx="18" cy="84" r="4"/><circle cx="96" cy="31" r="4"/><circle cx="180" cy="64" r="4"/><circle cx="226" cy="41" r="4"/></svg></article>
+        <article class="research-card reveal"><div class="card-top"><span class="card-index">R2</span><span class="card-chip accent"><span class="en">NEXT</span><span class="zh">重点</span></span></div><h3 class="en">Causally Controlled Agent Harness</h3><h3 class="zh">因果控制的智能体 Harness 系统</h3><p class="en">Treat planning, retrieval, tools, verification, reflection, memory, replanning, and stopping as an intervenable orchestration layer.</p><p class="zh">将规划、检索、工具调用、验证、反思、记忆、重规划与停止机制视为可干预的执行编排层。</p><div class="topic-list"><span>Harness</span><span>Long Horizon</span><span>Efficiency</span></div></article>
+        <article class="research-card reveal"><div class="card-top"><span class="card-index">R3</span></div><h3 class="en">Uncertainty, Calibration & Risk</h3><h3 class="zh">不确定性量化、校准与风险敏感决策</h3><p class="en">Use multi-source uncertainty as a proactive signal for verification, fallback, replanning, and safety constraints—not merely a confidence report.</p><p class="zh">使不确定性成为触发验证、回退、重规划与安全约束的前置决策信号，而非仅用于事后置信度报告。</p><div class="topic-list"><span>Calibration</span><span>Risk</span><span>Reliable AI</span></div></article>
+        <article class="research-card reveal"><div class="card-top"><span class="card-index">R4</span></div><h3 class="en">Distributional Causal Fairness</h3><h3 class="zh">分布式因果公平与责任人工智能</h3><p class="en">Move from mean-level disparities to counterfactual differences between predictive distributions, with auditable effect sizes and significance tests.</p><p class="zh">从均值差异扩展到预测分布的反事实差异，建立可审计、可比较且跨场景稳健的公平性检验范式。</p><div class="topic-list"><span>Fairness</span><span>Distribution Shift</span><span>Testing</span></div></article>
+        <article class="research-card reveal"><div class="card-top"><span class="card-index">R5</span></div><h3 class="en">Generalizable Agent Planning</h3><h3 class="zh">智能体规划方法与跨任务泛化</h3><p class="en">Model planning as continuous transport over meta-state distributions, shaped by value signals and generative flow matching.</p><p class="zh">将智能体规划表述为元状态分布的连续输运过程，以价值信号塑造目标分布，并通过生成式流匹配实现泛化。</p><div class="topic-list"><span>Flow Matching</span><span>Planning</span><span>Generalization</span></div></article>
+        <article class="research-card reveal"><div class="card-top"><span class="card-index">R6</span><span class="card-chip accent"><span class="en">NEXT</span><span class="zh">重点</span></span></div><h3 class="en">Causal Multi-Agent Social Simulation</h3><h3 class="zh">大模型多智能体因果社会模拟</h3><p class="en">Explain how interpretable micro-level interventions and network structure produce cooperation, trust, norms, polarization, efficiency, or collective risk.</p><p class="zh">通过重复博弈、反事实实验和机制发现，解释微观行动如何形成关系结构与宏观规范、极化、效率或集体风险。</p><div class="topic-list"><span>Multi-Agent</span><span>Social Emergence</span><span>Games</span></div></article>
+      </div>
+    </section>
+
+    <section class="section shell" id="publications">
+      <div class="section-heading heading-row reveal"><div><p class="section-number">03 / SELECTED PUBLICATIONS</p><h2 class="en">Research across <span>causality, planning, and trust.</span></h2><h2 class="zh">聚焦<span>因果、规划与可信智能</span>的代表性成果。</h2></div><p class="heading-note en">Selected recent work. Author order and status follow the supplied academic profile.</p><p class="heading-note zh">以下为部分近年工作，作者顺序与论文状态依据所提供的学术简历。</p></div>
+      <div class="publication-list">
+        <article class="publication featured reveal"><div class="pub-year">2026</div><div class="pub-main"><div class="pub-venue"><span>ICML 2026</span><b>FEATURED</b></div><h3>FlowMAP: Flow Matching for Generalizable Agent Planning</h3><p><strong>Jiarun Fu</strong>, Lizhong Ding*, Ye Yuan, Qiuning Wei, Zhaohuan Linghu, Yurong Cheng, Changsheng Li, Tianlong Gu, Liang Chang, Guoren Wang</p><div class="pub-tags"><span>Flow Matching</span><span>Agent Planning</span><span>Generalization</span></div></div><a class="pub-link" href="https://scholar.google.com/scholar?q=FlowMAP%3A+Flow+Matching+for+Generalizable+Agent+Planning" target="_blank" rel="noreferrer" aria-label="Search FlowMAP on Google Scholar">↗</a></article>
+        <article class="publication reveal"><div class="pub-year">2026</div><div class="pub-main"><div class="pub-venue"><span>AAAI 2026 · Oral</span></div><h3>Counterfactual Planning for Generalizable Agents' Actions</h3><p><strong>Jiarun Fu</strong>, Lizhong Ding*, Hao Li, Yuhan Guo, Yurong Cheng, Junyu Zhang</p><div class="pub-tags"><span>Counterfactual Planning</span><span>Agents</span></div></div><a class="pub-link" href="https://scholar.google.com/scholar?q=Counterfactual+Planning+for+Generalizable+Agents%27+Actions" target="_blank" rel="noreferrer" aria-label="Search paper on Google Scholar">↗</a></article>
+        <article class="publication reveal"><div class="pub-year">2026</div><div class="pub-main"><div class="pub-venue"><span>IEEE TKDE</span><b>Revision 1</b></div><h3>Causalizing Chain-of-Thought</h3><p><strong>Jiarun Fu</strong>, Lizhong Ding*, Hao Li, Pengqi Li, Chunhui Zhang, Xu Chen, Tianlong Gu, Ye Yuan, Guoren Wang</p><div class="pub-tags"><span>Chain-of-Thought</span><span>Causal Evaluation</span></div></div><a class="pub-link" href="https://scholar.google.com/scholar?q=Causalizing+Chain-of-Thought" target="_blank" rel="noreferrer" aria-label="Search paper on Google Scholar">↗</a></article>
+        <article class="publication reveal"><div class="pub-year">2026</div><div class="pub-main"><div class="pub-venue"><span>IEEE TNNLS</span></div><h3>Harnessing Multilevel Circulant Matrices for Generalizable Spectral Kernel Learning</h3><p>Lizhong Ding*, <strong>Jiarun Fu†</strong>, Qiuning Wei, Junyu Zhang, Huiwen Bai, Yazhou Yao, Ye Yuan, Guoren Wang <em>· † Co-first author</em></p><div class="pub-tags"><span>Spectral Learning</span><span>Generalization</span></div></div><a class="pub-link" href="https://scholar.google.com/scholar?q=Harnessing+Multilevel+Circulant+Matrices+for+Generalizable+Spectral+Kernel+Learning" target="_blank" rel="noreferrer" aria-label="Search paper on Google Scholar">↗</a></article>
+        <article class="publication reveal"><div class="pub-year">2026</div><div class="pub-main"><div class="pub-venue"><span>IEEE TPAMI</span><b>Revision 1</b></div><h3>Distributional Causal Fairness Testing</h3><p><strong>Jiarun Fu</strong>, Lizhong Ding, Pengqi Li, Qiuning Wei, Yong Liu, Tianlong Gu, Yiping Hong, Ye Yuan, Guoren Wang</p><div class="pub-tags"><span>Causal Fairness</span><span>Distributional Testing</span></div></div><a class="pub-link" href="https://scholar.google.com/scholar?q=Distributional+Causal+Fairness+Testing" target="_blank" rel="noreferrer" aria-label="Search paper on Google Scholar">↗</a></article>
+        <details class="more-publications reveal"><summary><span class="en">Show five more selected works</span><span class="zh">展开另外五项代表性成果</span><i>+</i></summary><div class="more-list">
+          <article class="publication compact"><div class="pub-year">2025</div><div class="pub-main"><div class="pub-venue"><span>NeurIPS 38</span></div><h3>Generalization Bounds for Kolmogorov-Arnold Networks (KANs) and Enhanced KANs with Lower Lipschitz Complexity</h3><p>Pengqi Li, Lizhong Ding*, <strong>Jiarun Fu</strong>, Chunhui Zhang, Guoren Wang, Ye Yuan</p></div></article>
+          <article class="publication compact"><div class="pub-year">2026</div><div class="pub-main"><div class="pub-venue"><span>ICLR 2026</span></div><h3>Learning for Highly Faithful Explainability</h3><p>Yuhan Guo, Lizhong Ding*, Shihao Jia, Yanyu Ren, Pengqi Li, <strong>Jiarun Fu</strong>, Changsheng Li, Ye Yuan, Guoren Wang</p></div></article>
+          <article class="publication compact"><div class="pub-year">2026</div><div class="pub-main"><div class="pub-venue"><span>ACL 2026</span></div><h3>Demystifying Uncertainty in LLMs: Active Calibration between Concepts and Human Evaluations</h3><p>Pengqi Li, Lizhong Ding*, Zhehao Zhou, Chunhui Zhang, <strong>Jiarun Fu</strong>, Hao Li, Ye Yuan, Guoren Wang</p></div></article>
+          <article class="publication compact"><div class="pub-year">2026</div><div class="pub-main"><div class="pub-venue"><span>Pattern Recognition</span></div><h3>VPF: Topology-preserving Virtual Path Fusion to Tackle Over-squashing</h3><p>Huiwen Bai, Lizhong Ding*, Junyu Zhang, Chunhui Zhang, <strong>Jiarun Fu</strong>, Liang Chang, Tianlong Gu, Changsheng Li, Ye Yuan, Guoren Wang</p></div></article>
+          <article class="publication compact"><div class="pub-year">—</div><div class="pub-main"><div class="pub-venue"><span>ACL ARR · Meta 4.0</span></div><h3>Gated Residual Discrepancy for Efficient Bi-Encoder Factuality Verification</h3><p>Zeyang Liu, Jingfeng Xue, <strong>Jiarun Fu</strong>, Wenbiao Du, Xiuqi Yang, Yifeng Fu, Junbao Chen, Yong Wang</p></div></article>
+        </div></details>
+      </div>
+    </section>
+
+    <section class="section shell" id="experience">
+      <div class="section-heading reveal"><p class="section-number">04 / EXPERIENCE</p><h2 class="en">Academic journey & <span>community direction.</span></h2><h2 class="zh">学术经历与<span>社区服务方向。</span></h2></div>
+      <div class="experience-layout">
+        <div class="timeline reveal">
+          <article class="timeline-item active"><div class="timeline-time">2026.04 — Present</div><div><h3 class="en">Visiting Student</h3><h3 class="zh">访问学生</h3><p class="en">Gaoling School of Artificial Intelligence, Renmin University of China</p><p class="zh">中国人民大学高瓴人工智能学院</p><small class="en">Collaborating with Prof. Xu Chen</small><small class="zh">合作导师：陈旭教授</small></div></article>
+          <article class="timeline-item active"><div class="timeline-time">2023.09 — Present</div><div><h3 class="en">Ph.D. Candidate</h3><h3 class="zh">博士生</h3><p class="en">School of Computer Science, Beijing Institute of Technology</p><p class="zh">北京理工大学计算机学院</p><small class="en">Advised by Prof. Lizhong Ding</small><small class="zh">导师：丁立中教授</small></div></article>
+        </div>
+        <aside class="service-card glass-card reveal"><p class="section-number">COMMUNITY</p><h3 class="en">What I hope to contribute</h3><h3 class="zh">希望参与的学术共同体工作</h3><ul><li><span>01</span><p class="en">Exchange on causal agents and trustworthy large models.</p><p class="zh">推动“因果智能体与可信大模型”专题交流。</p></li><li><span>02</span><p class="en">Interdisciplinary causal social simulation with social science and complex systems.</p><p class="zh">促进因果社会模拟与社会科学、复杂系统的交叉研究。</p></li><li><span>03</span><p class="en">Open benchmarks, reproducible protocols, and support for early-career researchers.</p><p class="zh">推动开放基准、可复现实验协议与青年人才培养。</p></li></ul></aside>
+      </div>
+    </section>
+
+    <section class="section shell contact-section" id="contact">
+      <div class="contact-card reveal">
+        <div class="contact-copy"><p class="section-number">05 / CONTACT</p><h2 class="en">Let’s build more <span>causal, reliable intelligence.</span></h2><h2 class="zh">共同构建更具<span>因果性与可靠性</span>的智能。</h2><p class="en">I welcome conversations about causal AI, agent planning, uncertainty, trustworthy reasoning, and multi-agent social simulation.</p><p class="zh">欢迎围绕因果智能、智能体规划、不确定性、可信推理及多智能体社会模拟开展交流与合作。</p></div>
+        <div class="contact-actions"><a class="contact-link" href="mailto:jrfu@bit.edu.cn"><span>Email</span><strong>jrfu@bit.edu.cn</strong><i>↗</i></a><a class="contact-link" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer"><span>GitHub</span><strong>@YOUR_GITHUB_USERNAME</strong><i>↗</i></a><a class="contact-link" href="https://scholar.google.com/scholar?q=%22Jiarun+Fu%22+causal+planning" target="_blank" rel="noreferrer"><span>Scholar</span><strong class="en">Search publications</strong><strong class="zh">检索学术成果</strong><i>↗</i></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell"><p>© <span id="year">2026</span> Jiarun Fu. <span class="en">Designed for clarity, causality, and motion.</span><span class="zh">以清晰、因果与动态为设计语言。</span></p><a href="#top"><span class="en">Back to top</span><span class="zh">返回顶部</span> ↑</a></footer>
+  <noscript><div class="noscript">This site works best with JavaScript enabled; all core content remains available.</div></noscript>
+</body>
+</html>
